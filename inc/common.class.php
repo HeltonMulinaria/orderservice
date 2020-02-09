@@ -139,7 +139,6 @@ class CommonOrderService extends CommonDBTM {
                                 FROM glpi_itilsolutions
                                 WHERE itemtype = 'Ticket'
                                 AND items_id = '$idTicket'
-                                AND status = 3
                                 ORDER BY id DESC
                                 LIMIT 1
                             ";
