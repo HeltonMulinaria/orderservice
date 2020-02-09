@@ -244,8 +244,8 @@ class CommonOrderService extends CommonDBTM {
                         c.name AS Localidade
                         FROM glpi_users a 
                         LEFT JOIN glpi_useremails b ON (b.users_id = a.id)
-                        LEFT JOIN glpi_locations c ON (c.id = a.locations_id)
-                        WHERE b.is_default = 1 AND a.id = ". $osUserId[0] . "
+                        LEFT JOIN glpi_locations c ON (c.id = a.locations_id)                        
+                        WHERE  a.id = ". $osUserId[0] . "
                     ";
         $resUsers = $DB->query($selUsers);
         $users = $DB->fetch_assoc($resUsers);
