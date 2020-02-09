@@ -168,7 +168,7 @@ class CommonOrderService extends CommonDBTM {
         $dateInitial = $DB->fetch_assoc($resDateInitial);
         
         // Seleciona a data final
-        $selDateFinish = "SELECT closedate, date_format(closedate, '%d/%m/%Y %H:%i') AS DataFinal
+        $selDateFinish = "SELECT solvedate, date_format(solvedate, '%d/%m/%Y %H:%i') AS DataFinal
                             FROM glpi_tickets
                             WHERE id = '$idTicket'
                         ";
