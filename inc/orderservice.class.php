@@ -142,33 +142,16 @@ class PluginOrderService extends CommonOrderService {
                 echo html_entity_decode($solution);
             endif;
 
-        echo ' 
-            </td></tr>
-            <tr><td class="ali-center header-td"><b>Assinaturas</b></td></tr><tr>
-            ';
-
-        echo '<table width="700" style="margin-top:25px;margin-bottom:20px;" align="center" cellspacing="0">';
+            echo '</td></tr><tr><td class="ali-center header-td"><b>Assinatura</b></td></tr><tr>';
+            echo '<table width="700" style="margin-top:25px;margin-bottom:20px;" align="center" cellspacing="0">';
             echo '<tr class="ali-center">';
-            echo '<td class="ali-center">____________________________________</td>';
-            echo '<td class="ali-center">____________________________________</td>'; 
+            echo '<td class="ali-center">____________________________________</td>';             
             echo '<td class="ali-center">____________________________________</td></tr>';
-
-            echo ' 
-                <tr class="ali-center">
-                <td class="ali-center"><b>Requerente:</b> '. $users['Nome'] . ' ' . $users['Sobrenome'] .'</td>
-                <td class="ali-center"><b>Encarregado do Local</b></td>    
-                <td class="ali-center">
-                ';
-            
-            if($ticketsUser[2] === ''):
-                echo '<b>Técnico Responsável</b>';
-            else:
-                echo '<b>Técnico</b> ' . $ticketsUser[2];
-            endif; 
-        
-        echo '</td></tr></table>'; 
-        echo '</tr></table></td></tr></table>';
-        echo '<style media="print"></style>';
+            echo '<tr class="ali-center"><td class="ali-center"><b>Data</b></td><td class="ali-center">';                
+            echo '<b>Responsável pela retirada </b>';        
+            echo '</td></tr></table>'; 
+            echo '</tr></table></td></tr></table>';
+            echo '<style media="print"></style>';
 
     }
 
